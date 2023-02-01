@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 const fs =require("fs");
 const server = http.createServer(function(req, res) 
 { 
-// res.writeHead(200, {'Content-type' : 'text/css'});
+res.writeHead(200, {'Content-type' : 'text/css'});
 var fileContents = fs.readFileSync('./style.css', {encoding: 'utf8'});
 res.write(fileContents);
 res.end();
